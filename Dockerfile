@@ -5,6 +5,6 @@ RUN npm install
 RUN cd /app
 EXPOSE 8000
 
-FROM node:alpine:3.17
+FROM node:lts-alpine3.17
 COPY --from=build . /app
 CMD ["node","index.js"]
